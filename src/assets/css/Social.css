@@ -1,0 +1,32 @@
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+    z-index: 10;
+}
+.social {
+     display: flex;
+     position: fixed;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-direction: column;
+     background-color: #2C2C2C;
+     font-size: 1.5em;
+     width: 60px;
+     height: 200px;
+     border-radius: 2em;
+}
+.social a {
+    color: rgb(214, 215, 216);
+}
+.social a:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to left, #DCE42B, #4FE42B, #2BE4C5, #49adf0, #2BE4C5, #4FE42B, #DCE42B);  
+    animation: color 3s linear infinite;
+    background-size: 500%; 
+    transition: 2s;
+}

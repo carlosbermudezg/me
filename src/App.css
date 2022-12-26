@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2BE4C5 #2C2C2C;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2C2C2C;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to left, #2BE4C5,#2BE4C5, #2be472);
+  border-radius: 20px;
+}
+.App {
+  width: inherit;
+  height: inherit;
+}
+.main{
+  width: 100%;
+  display: flex;
+  height: inherit;
+}
+.btn {
+  text-decoration: none;
+  border-radius: 2em;
+  padding: 0.8em;
+  color: #161716;
+  background-image: linear-gradient(to left, #2BE4C5,#2BE4C5, #2be472);  
+}
+.btn:hover {
+  box-shadow: 0 4px 2px -2px #000;
+}
+@keyframes color {
+  from {
+      background-position: 0% 50%;
+  }
+
+  to {
+      background-position: 100% 50%;
+  }
+}
