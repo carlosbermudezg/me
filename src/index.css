@@ -6,7 +6,8 @@
   height: 100%;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #1b1b1b;
+  background: rgb(48,55,54);
+background: linear-gradient(156deg, rgba(48,55,54,1) 0%, rgba(95,129,124,0.8071603641456583) 51%, rgba(48,55,54,1) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

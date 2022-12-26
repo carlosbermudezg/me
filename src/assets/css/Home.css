@@ -15,8 +15,8 @@
     position: relative;
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to left, #2BE4C5,#2BE4C5, #2be472);   
+    color: #fff;
+    text-shadow: #194158 3px 4px;
   }
   
   .home .blink {
@@ -35,14 +35,18 @@
     width: 100%;
   }
   .me {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-  }
-  .photo {
     width: 200px;
     height: 200px;
+    background-color: #fff;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .photo {
+    width: 180px;
+    height: 200px;
   }
   .home__right {
     display: flex;

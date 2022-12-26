@@ -1,6 +1,7 @@
 import Navbar from './components/Nav'
 import Home from './components/Home'
 import Social from './components/Social'
+import Projects from './components/Projects'
 import './App.css'
 import { useCallback } from "react";
 import Particles from "react-particles";
@@ -64,10 +65,10 @@ function App() {
                 },
                 particles: {
                     color: {
-                        value: "#777",
+                        value: "#fff",
                     },
                     links: {
-                        color: "#444",
+                        color: "#888",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,

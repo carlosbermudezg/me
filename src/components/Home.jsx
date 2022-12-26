@@ -43,7 +43,7 @@ const Home = ()=> {
     
 
     return(
-        <section id='particles-js' className="home">
+        <section className="home">
             <div className='home__left'>
                 <div className='me'>
                     <img className='photo' src="/src/assets/img/me.png" alt="me" />

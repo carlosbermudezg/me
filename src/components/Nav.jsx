@@ -5,7 +5,7 @@ const Navbar = ()=> {
         <section className='navbar-container'>
             <nav className="navbar">
                 <div className='logo'>
-                    <a href="#">Carlos Bermúdez García</a>
+                    <a href="#">Carlos Bermúdez</a>
                 </div>
                 <div className='navbar__mobile'>
                     <i className="fa-solid fa-bars"></i>
