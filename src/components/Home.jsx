@@ -2,6 +2,7 @@ import '/src/assets/css/Home.css'
 import { useState, useEffect } from 'react'
 import ToolsCards from './ToolsCard'
 import tools from '/src/data/tools'
+import photo from '/src/assets/img/me.png'
 
 const Home = ()=> {
     //Info a mostrar
@@ -46,7 +47,7 @@ const Home = ()=> {
         <section className="home">
             <div className='home__left'>
                 <div className='me'>
-                    <img className='photo' src="/src/assets/img/me.png" alt="me" />
+                    <img className='photo' src={ photo } alt="me" />
                 </div>
                 <h1 className='h1'>FullStack Web Developer</h1>
                 <div className='introduction'>
