@@ -4,7 +4,7 @@
     align-items: center;
     width: 100px;
     height: 100%;
-    z-index: 10;
+    z-index: 15;
 }
 .social {
      display: flex;
@@ -29,4 +29,7 @@
     animation: color 3s linear infinite;
     background-size: 500%; 
     transition: 2s;
+}
+.openSocial {
+    display: none;
 }

@@ -3,11 +3,11 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  height: 100%;
+  height: auto;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background: rgb(48,55,54);
-background: linear-gradient(156deg, rgba(48,55,54,1) 0%, rgba(95,129,124,0.8071603641456583) 51%, rgba(48,55,54,1) 100%);
+  background: linear-gradient(156deg, rgba(48,55,54,1) 0%, rgba(95,129,124,0.8071603641456583) 51%, rgba(48,55,54,1) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

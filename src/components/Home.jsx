@@ -57,16 +57,20 @@ const Home = ()=> {
                 </div>
             </div>
             <div className='home__right'>
-            <h2>Skills</h2>
-                <div className='tecno'>
-                    {
-                        tools.map((element, index)=>{
-                            return <ToolsCards key={ `tool-${index}` } {...element} />
-                        })
-                    }
+                <div>
+                    <h2>Skills</h2>
+                    <div className='tecno'>
+                        {
+                            tools.map((element, index)=>{
+                                return <ToolsCards key={ `tool-${index}` } {...element} />
+                            })
+                        }
+                    </div>
                 </div>
-                <span className='blink'> { spanInfo }</span>
-                <a className='btn' href="#"><i className="fa-solid fa-arrow-down"></i> Download CV</a>
+                <div>
+                    <span className='blink'> { spanInfo }</span>
+                    <a className='btn' href="#"><i className="fa-solid fa-arrow-down"></i> Download CV</a>
+                </div>
             </div>
         </section>
     )
