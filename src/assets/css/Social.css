@@ -30,6 +30,13 @@
     background-size: 500%; 
     transition: 2s;
 }
-.openSocial {
+.social .openSocial {
     display: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to left, #DCE42B, #4FE42B, #2BE4C5, #49adf0, #2BE4C5, #4FE42B, #DCE42B);  
+    animation: color 3s linear infinite;
+    background-size: 500%; 
+    transition: 2s;
 }

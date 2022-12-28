@@ -65,27 +65,55 @@
   .menu {
     display: none;
   }
+  .menu__show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #000;
+    z-index: 50;
+    width: 100%;
+    top: 60px;
+    height: 80px;
+    animation: menuSlide 0.3s;
+  }
   .navbar {
     justify-content: space-between;
   }
   .navbar__mobile {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
+    height: 60px;
+    font-size: 1.5em;
+  }
+  .navbar__mobile a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 60px;
   }
   .social-container {
     position: fixed;
-    bottom: 50px;
     height: auto;
   }
   .social {
     height: auto;
     padding: 0.75em;
+    bottom: 20px;
+    gap: 1em;
+    background-color: rgb(0, 0, 0);
   }
-  .openSocial {
+  .social .openSocial {
     display: block;
   }
   .socialIcon {
     display: none;
+  }
+  .show {
+    display: block;
   }
   .home .h1 {
     font-size: 2em;
@@ -102,5 +130,16 @@
 @media screen and (max-width:480px) {
   .home .h1 {
     font-size: 1.5em;
+  }
+}
+@keyframes menuSlide {
+  from {
+    margin-top: 60px;
+    height: 0px;
+  }
+
+  to {
+    margin-top: 0px;
+    height: 80px;
   }
 }

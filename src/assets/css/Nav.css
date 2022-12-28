@@ -14,7 +14,7 @@
     background-color: #2C2C2C;
 }
 .navbar__mobile {
-    display: none;
+    display: none; 
 }
 .logo {
     display: flex;
