@@ -1,7 +1,7 @@
 import '/src/assets/css/Home.css'
 import { useState, useEffect } from 'react'
-import ToolsCards from './ToolsCard'
-import tools from '/src/data/tools'
+import SkillCards from './SkillsCards'
+import skills from '/src/data/skills'
 import photo from '/src/assets/img/me.png'
 
 const Home = ()=> {
@@ -61,8 +61,8 @@ const Home = ()=> {
                     <h2>Skills</h2>
                     <div className='tecno'>
                         {
-                            tools.map((element, index)=>{
-                                return <ToolsCards key={ `tool-${index}` } {...element} />
+                            skills.map((element, index)=>{
+                                return <SkillCards key={ `tool-${index}` } {...element} />
                             })
                         }
                     </div>

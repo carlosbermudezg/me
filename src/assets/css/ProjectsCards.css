@@ -1,0 +1,27 @@
+.projects__main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.projects__container {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+.project__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 300px;
+    height: 300px;
+    border-radius: 1em;
+    cursor: pointer;
+}

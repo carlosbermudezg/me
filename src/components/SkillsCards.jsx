@@ -1,7 +1,7 @@
-import '/src/assets/css/ToolsCards.css'
+import '/src/assets/css/SkillsCards.css'
 import useHover from '../hooks/useHover'
 
-const ToolsCards = ({tool,background,icon,rotate})=>{
+const SkillCards = ({tool,background,icon,rotate})=>{
 
     const [hoverRef, isHovered] = useHover();
 
@@ -17,4 +17,4 @@ const ToolsCards = ({tool,background,icon,rotate})=>{
     )
 }
 
-export default ToolsCards
+export default SkillCards

@@ -1,7 +1,8 @@
 import Navbar from './components/Nav'
 import Home from './components/Home'
 import Social from './components/Social'
-import Projects from './components/Projects'
+import ProjectCard from './components/ProjectCard'
+import projects from './data/projects'
 import './App.css'
 import { useCallback } from "react";
 import Particles from "react-particles";
@@ -9,6 +10,7 @@ import { loadFull } from "tsparticles";
 
 function App() {
 
+    // ParticlesJS
   const particlesInit = useCallback(async engine => {
       //console.log(engine);
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -19,6 +21,8 @@ function App() {
   const particlesLoaded = useCallback(async container => {
       //await console.log(container);
   }, []);
+
+
 
   return (
     <div className="App">
@@ -110,6 +114,16 @@ function App() {
           
         
         </Particles>
+      </section>
+      <section className='projects__main'>
+        <h1>Projects</h1>
+        <div className='projects__container'>
+            {
+                projects.map((element, index)=>{
+                    return <ProjectCard key={ `project-card-${index}` } {...element} />
+                })
+            }
+        </div>
       </section>
     </div>
   )
