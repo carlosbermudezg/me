@@ -4,29 +4,39 @@
     height: 60px;
     z-index: 20;
 }
+
 .navbar {
     position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    justify-self: center;
+    width: 40%;
+    top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 2em;
     height: 60px;
-    background-color: #2C2C2C;
+    background-color: var(--navbar-bg);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .navbar__mobile {
-    display: none; 
+    display: none;
 }
+
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 20%;
 }
+
 .logo a {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to left, #2BE4C5,#2BE4C5, #2be472);
+    background-image: linear-gradient(to left, #2BE4C5, #2BE4C5, #2be472);
     text-decoration: none;
     font-size: 1.5em;
     display: flex;
@@ -34,25 +44,28 @@
     align-items: center;
     font-family: 'Fugaz One', cursive;
 }
+
 .menu .menu__active {
     border-bottom: 2px solid aliceblue;
     color: aliceblue;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to left, #DCE42B, #4FE42B, #2BE4C5, #49adf0, #2BE4C5, #4FE42B, #DCE42B);  
+    background-image: linear-gradient(to left, #DCE42B, #4FE42B, #2BE4C5, #49adf0, #2BE4C5, #4FE42B, #DCE42B);
     animation: color 3s linear infinite;
-    background-size: 500%; 
+    background-size: 500%;
     transition: 2s;
 }
+
 .menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 1em;
-    width: 40%;
+    gap: 1.2em;
+    width: 50%;
     height: inherit;
 }
+
 .menu a {
     display: flex;
     align-items: center;
@@ -60,16 +73,35 @@
     height: inherit;
     text-align: center;
     border-bottom: 2px solid transparent;
-    color: rgb(119, 119, 119);
-    transition: 0.7s;
+    color: var(--nav-link-color);
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
+
 .menu a:hover {
-    border-bottom: 2px solid aliceblue;
+    border-bottom: 2px solid #2BE4C5;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to left, #DCE42B, #4FE42B, #2BE4C5, #49adf0, #2BE4C5, #4FE42B, #DCE42B);  
+    background-image: linear-gradient(to left, #DCE42B, #4FE42B, #2BE4C5, #49adf0, #2BE4C5, #4FE42B, #DCE42B);
     animation: color 3s linear infinite;
-    background-size: 500%; 
-    transition: 2s;
+    background-size: 500%;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--theme-btn-color);
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.15) rotate(15deg);
 }

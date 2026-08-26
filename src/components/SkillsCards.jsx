@@ -1,20 +1,28 @@
 import '/src/assets/css/SkillsCards.css'
 import useHover from '../hooks/useHover'
 
-const SkillCards = ({tool,background,icon,rotate})=>{
-
+const SkillCards = ({ tool, background, icon, rotate }) => {
     const [hoverRef, isHovered] = useHover();
 
-    let animation = ''
+    const animation = rotate === true ? 'rotateIcon 7s linear infinite' : '';
 
-    rotate === true ? animation = 'rotateIcon 7s linear infinite': ''
+    const dynamicStyle = isHovered
+        ? {
+            borderColor: background,
+            boxShadow: `0 10px 30px ${background}35, inset 0 0 15px ${background}15`,
+            background: `linear-gradient(135deg, ${background}25 0%, rgba(255, 255, 255, 0.08) 100%)`,
+        }
+        : {};
 
-    return(
-        <div className='tool-card' ref={hoverRef} style={ isHovered ? {background: background } : {background: '#2C2C2C' } }>
-            <small className='tool__name'>{ tool }</small>
-            <i className={ icon } style={ !isHovered ? {color: background, animation: animation } : {color: 'aliceblue', animation: animation } }></i>
+    return (
+        <div className="tool-card" ref={hoverRef} style={dynamicStyle}>
+            <div className="tool-card__glow-dot" style={{ backgroundColor: background }}></div>
+            <div className="tool-card__icon-wrapper" style={{ color: isHovered ? '#ffffff' : background }}>
+                <i className={icon} style={{ animation }}></i>
+            </div>
+            <span className="tool__name">{tool}</span>
         </div>
-    )
-}
+    );
+};
 
-export default SkillCards
+export default SkillCards;

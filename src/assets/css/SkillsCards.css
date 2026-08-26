@@ -1,40 +1,100 @@
 .tool-card {
-    width: 150px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
+    position: relative;
+    display: inline-flex;
     align-items: center;
-    flex-direction: column;
-    border-radius: 1em;
+    gap: 0.9em;
+    padding: 0.7em 1.3em;
+    border-radius: 1.2rem;
     cursor: pointer;
-    transition: 1s;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    flex-shrink: 0;
+    user-select: none;
+    overflow: hidden;
 }
+
+[data-theme="light"] .tool-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
 .tool-card:hover {
-    transition: 1s;
+    transform: translateY(-4px) scale(1.03);
 }
-.tool-card:hover {
-    box-shadow: 0 4px 2px -2px #000;
+
+.tool-card__glow-dot {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.tool-card > i {
-    font-size: 3em;
+
+.tool-card:hover .tool-card__glow-dot {
+    opacity: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 8px currentColor;
 }
-.tool-card > img {
-    width: 50px;
-    height: 50px;
+
+.tool-card__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.tool-card:hover .tool-card__icon-wrapper {
+    transform: scale(1.18);
+}
+
+.tool__name {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9em;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.tool-card:hover .tool__name {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+[data-theme="light"] .tool-card:hover .tool__name {
+    color: #102a43;
+}
+
+@media screen and (max-width: 768px) {
+    .tool-card {
+        padding: 0.5em 0.9em;
+        gap: 0.6em;
+        border-radius: 0.9rem;
+    }
+
+    .tool-card__icon-wrapper {
+        font-size: 1.25em;
+    }
+
+    .tool__name {
+        font-size: 0.8em;
+    }
+}
+
 @keyframes rotateIcon {
     from {
-        -ms-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
         transform: rotate(0deg);
-      }
-      to {
-        -ms-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
+    }
+    to {
         transform: rotate(360deg);
-      }
+    }
 }

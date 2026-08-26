@@ -7,19 +7,22 @@
     z-index: 15;
 }
 .social {
-     display: flex;
-     position: fixed;
-     justify-content: space-evenly;
-     align-items: center;
-     flex-direction: column;
-     background-color: #2C2C2C;
-     font-size: 1.5em;
-     width: 60px;
-     height: 200px;
-     border-radius: 2em;
+    display: flex;
+    position: fixed;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--social-bg);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    font-size: 1.5em;
+    width: 60px;
+    height: 200px;
+    border-radius: 2em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .social a {
-    color: rgb(214, 215, 216);
+    color: var(--social-link-color);
+    transition: color 0.3s ease;
 }
 .social a:hover {
     background-clip: text;
@@ -28,7 +31,6 @@
     background-image: linear-gradient(to left, #DCE42B, #4FE42B, #2BE4C5, #49adf0, #2BE4C5, #4FE42B, #DCE42B);  
     animation: color 3s linear infinite;
     background-size: 500%; 
-    transition: 2s;
 }
 .social .openSocial {
     display: none;
@@ -38,5 +40,4 @@
     background-image: linear-gradient(to left, #DCE42B, #4FE42B, #2BE4C5, #49adf0, #2BE4C5, #4FE42B, #DCE42B);  
     animation: color 3s linear infinite;
     background-size: 500%; 
-    transition: 2s;
 }
