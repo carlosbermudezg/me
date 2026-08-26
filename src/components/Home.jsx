@@ -52,7 +52,7 @@ const Home = () => {
                     </div>
                     <div className='introduction'>
                         <h1 className='h1'>Hey👋, I’m Carlos</h1>
-                        <span className='blink'> {spanInfo}</span>
+                        {/* <span className='blink'> {spanInfo}</span> */}
                         <p>
                             Software developer &
                             Network builder.
