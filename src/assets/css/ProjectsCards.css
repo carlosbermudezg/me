@@ -19,11 +19,25 @@
 
 .projects-slider-container {
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     position: relative;
     padding: 12px 0;
+    cursor: grab;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.projects-slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.projects-slider-container:active {
+    cursor: grabbing;
 }
 
 .projects-track {
@@ -37,11 +51,6 @@
     gap: 1.2em;
     padding-right: 1.2em;
     flex-shrink: 0;
-    animation: marqueeProjects 25s linear infinite;
-}
-
-.projects-slider-container:hover .projects-group {
-    animation-play-state: paused;
 }
 
 /* Project Capsule Card Styling */
@@ -119,16 +128,6 @@
 
 [data-theme="light"] .project-card:hover .project-card__name {
     color: #102a43;
-}
-
-@keyframes marqueeProjects {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
 }
 
 @media screen and (max-width: 768px) {

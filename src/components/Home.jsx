@@ -4,7 +4,10 @@ import SkillCards from './SkillsCards'
 import skills from '/src/data/skills'
 import photo from '/src/assets/img/me.png'
 
+import { useAutoAndTouchSlider } from '../hooks/useAutoAndTouchSlider'
+
 const Home = () => {
+    const tecnoSliderRef = useAutoAndTouchSlider(0.7);
     //Info a mostrar
     const allInfo = [
         'FullStack Web Developer',
@@ -64,7 +67,7 @@ const Home = () => {
                     <div className='btn-info'>
                         <a className='btn' href="#"><i className="fa-solid fa-arrow-down"></i> Download CV</a>
                     </div>
-                    <div className='tecno-slider-container'>
+                    <div className='tecno-slider-container' ref={tecnoSliderRef}>
                         <div className='tecno-track'>
                             <div className='tecno-group'>
                                 {skills.map((element, index) => (

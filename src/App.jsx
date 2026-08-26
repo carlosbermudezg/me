@@ -9,10 +9,12 @@ import { useCallback, useState } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { useTheme } from './context/ThemeContext'
+import { useAutoAndTouchSlider } from './hooks/useAutoAndTouchSlider'
 
 function App() {
     const { theme } = useTheme();
     const [selectedProject, setSelectedProject] = useState(null);
+    const projectsSliderRef = useAutoAndTouchSlider(0.7);
 
     // ParticlesJS
     const particlesInit = useCallback(async engine => {
@@ -114,7 +116,7 @@ function App() {
 
             <section className='projects__main' id="projects">
                 <h2 className="projects__title-heading">Projects</h2>
-                <div className='projects-slider-container'>
+                <div className='projects-slider-container' ref={projectsSliderRef}>
                     <div className='projects-track'>
                         <div className='projects-group'>
                             {projects.map((element, index) => (
