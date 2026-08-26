@@ -9,7 +9,7 @@ const ProjectCard = ({ project, background, img, onClick }) => {
     const dynamicStyle = isHovered
         ? {
             borderColor: background,
-            boxShadow: `0 10px 30px ${background}35, inset 0 0 15px ${background}15`,
+            boxShadow: `0 4px 12px ${background}20`,
             background: `linear-gradient(135deg, ${background}25 0%, rgba(255, 255, 255, 0.08) 100%)`,
         }
         : {};

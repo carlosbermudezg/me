@@ -4,14 +4,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2em 0;
+    padding: 0.5em 0;
     z-index: 10;
 }
 
 .projects__title-heading {
     font-family: 'Fugaz One', cursive;
     font-size: 2.2em;
-    margin: 0 0 1em 0;
+    margin: 0 0 0.5em 0;
     color: var(--text-color);
     text-align: center;
     transition: color 0.3s ease;
@@ -22,7 +22,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     position: relative;
-    padding: 24px 0;
+    padding: 4px 0;
     cursor: grab;
     user-select: none;
     -webkit-overflow-scrolling: touch;
@@ -50,8 +50,8 @@
     align-items: center;
     gap: 1.2em;
     padding-right: 1.2em;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
     flex-shrink: 0;
 }
 
@@ -68,7 +68,7 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 4px 15px var(--shadow-color);
+    box-shadow: 0 2px 8px var(--shadow-color);
     transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     flex-shrink: 0;
     user-select: none;
