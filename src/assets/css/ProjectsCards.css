@@ -22,7 +22,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     position: relative;
-    padding: 12px 0;
+    padding: 24px 0;
     cursor: grab;
     user-select: none;
     -webkit-overflow-scrolling: touch;
@@ -50,6 +50,8 @@
     align-items: center;
     gap: 1.2em;
     padding-right: 1.2em;
+    padding-top: 10px;
+    padding-bottom: 20px;
     flex-shrink: 0;
 }
 
