@@ -166,8 +166,18 @@
     gap: 2em;
   }
 
+  .home__top {
+    flex-direction: column;
+  }
+
   .me {
-    display: none
+    width: 75px;
+    height: 75px;
+  }
+
+  .photo {
+    width: 65px;
+    height: 75px;
   }
 }
 
